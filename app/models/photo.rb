@@ -5,4 +5,6 @@ class Photo < ApplicationRecord
 
   # Validations
 
+  validates :caption, :length => { :minimum => 0, :maximum => 300, :allow_blank => true }
+
 end
