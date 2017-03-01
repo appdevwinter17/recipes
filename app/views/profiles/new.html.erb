@@ -14,7 +14,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/create_profile" method="post">
+    <form action="/create_profile" method="post" enctype="multipart/form-data">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -33,7 +33,7 @@
           User photo
         </label>
 
-        <input type="text" id="user_photo" name="user_photo" placeholder="User photo" class="form-control" value="<%= @profile.user_photo %>">
+        <input type="file" id="user_photo" name="user_photo" class="form-control">
       </div>
 
       <!-- Label and input for bio -->

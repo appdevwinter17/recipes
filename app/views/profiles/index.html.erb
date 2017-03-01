@@ -18,7 +18,7 @@
       <% @profiles.each do |profile| %>
       <tr>
         <td><%= profile.user.email %></td>
-        <td><%= profile.user_photo %></td>
+        <td><img src='<%= profile.user_photo %>' class='img-responsive'></td>
         <td><%= profile.bio %></td>
         <td>
           <a href="/profiles/<%= profile.id %>" class="btn btn-primary">Show</a>
