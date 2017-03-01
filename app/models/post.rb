@@ -1,6 +1,9 @@
 class Post < ApplicationRecord
   # Direct associations
 
+  belongs_to :user,
+             :counter_cache => true
+
   has_many   :recipes,
              :dependent => :destroy
 
