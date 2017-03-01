@@ -15,7 +15,7 @@
 
       <% @photos_of_recipes.each do |photos_of_recipe| %>
       <tr>
-        <td><%= photos_of_recipe.recipe_id %></td>
+        <td><%= photos_of_recipe.recipe.post_id %></td>
         <td>
           <a href="/photos_of_recipes/<%= photos_of_recipe.id %>" class="btn btn-primary">Show</a>
           <a href="/photos_of_recipes/<%= photos_of_recipe.id %>/edit" class="btn btn-warning">Edit</a>
