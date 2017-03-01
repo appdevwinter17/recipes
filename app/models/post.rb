@@ -1,6 +1,9 @@
 class Post < ApplicationRecord
   # Direct associations
 
+  has_many   :recipes,
+             :dependent => :destroy
+
   has_many   :photos,
              :dependent => :destroy
 
