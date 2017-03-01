@@ -16,6 +16,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.new
+    @photo = Photo.new
+    @comment = Comment.new
+    @like = Like.new
     @post = Post.find(params[:id])
 
     render("posts/show.html.erb")

@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @photos_of_recipe = PhotosOfRecipe.new
     @recipe = Recipe.find(params[:id])
 
     render("recipes/show.html.erb")
