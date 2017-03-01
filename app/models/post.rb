@@ -5,6 +5,8 @@ class Post < ApplicationRecord
 
   # Validations
 
+  validates :title, :length => { :minimum => 0, :maximum => 100 }
+
   validates :user_id, :presence => true
 
 end
