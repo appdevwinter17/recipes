@@ -1,6 +1,8 @@
 class Comment < ApplicationRecord
   # Direct associations
 
+  belongs_to :user
+
   belongs_to :post,
              :counter_cache => true
 
