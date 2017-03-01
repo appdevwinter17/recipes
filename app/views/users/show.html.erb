@@ -39,12 +39,14 @@
             <a href="/posts/<%= post.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == post.user %>
+              <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -70,12 +72,14 @@
             <a href="/likes/<%= like.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/likes/<%= like.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_like/<%= like.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == like.user %>
+              <a href="/likes/<%= like.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_like/<%= like.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -101,12 +105,14 @@
             <a href="/comments/<%= comment.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_comment/<%= comment.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == comment.user %>
+              <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_comment/<%= comment.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -132,12 +138,14 @@
             <a href="/friend_requests/<%= friend_request.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/friend_requests/<%= friend_request.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_friend_request/<%= friend_request.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == friend_request.recipient %>
+              <a href="/friend_requests/<%= friend_request.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_friend_request/<%= friend_request.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -163,12 +171,14 @@
             <a href="/friend_requests/<%= friend_request.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/friend_requests/<%= friend_request.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_friend_request/<%= friend_request.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == friend_request.recipient %>
+              <a href="/friend_requests/<%= friend_request.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_friend_request/<%= friend_request.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -194,12 +204,14 @@
             <a href="/posts/<%= post.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == post.user %>
+              <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -225,12 +237,14 @@
             <a href="/posts/<%= post.id %>" class="btn btn-primary">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
+            <%if current_user == post.user %>
+              <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
