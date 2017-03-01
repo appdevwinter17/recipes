@@ -18,6 +18,10 @@ class Post < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :likers,
+             :through => :likes,
+             :source => :user
+
   # Validations
 
   validates :title, :length => { :minimum => 0, :maximum => 100 }

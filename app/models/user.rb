@@ -25,6 +25,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :liked_posts,
+             :through => :likes,
+             :source => :post
+
   # Validations
 
   # Include default devise modules. Others available are:
