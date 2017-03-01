@@ -10,7 +10,8 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @profiles = Profile.page(params[:page]).per(10)
+    @q = Profile.ransack(params[:q])
+    @profiles = @q.result(:distinct => true).includes(:user).page(params[:page]).per(10)
 
     render("profiles/index.html.erb")
   end
