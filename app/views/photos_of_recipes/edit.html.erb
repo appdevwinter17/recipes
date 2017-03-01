@@ -24,7 +24,7 @@
           Recipe
         </label>
 
-        <input type="text" id="recipe_id" name="recipe_id" placeholder="Recipe" class="form-control" value="<%= @photos_of_recipe.recipe_id %>">
+        <%= select_tag(:recipe_id, options_from_collection_for_select(Recipe.all, :id, :post_id, @photos_of_recipe.recipe_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-warning">
