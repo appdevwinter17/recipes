@@ -48,8 +48,6 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = Profile.find(params[:id])
-
-    @profile.user_id = params[:user_id]
     @profile.user_photo = params[:user_photo]
     @profile.bio = params[:bio]
 
