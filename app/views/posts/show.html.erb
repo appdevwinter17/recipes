@@ -9,7 +9,13 @@
       <dd><%= @post.title %></dd>
 
       <dt>User</dt>
-      <dd><%= @post.user_id %></dd>
+      <dd>
+        <% if @post.user.present? %>
+          <a href="/users/<%= @post.user_id %>">
+            <%= @post.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Description</dt>
       <dd><%= @post.description %></dd>

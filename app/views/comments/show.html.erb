@@ -9,10 +9,22 @@
       <dd><%= @comment.comment %></dd>
 
       <dt>User</dt>
-      <dd><%= @comment.user_id %></dd>
+      <dd>
+        <% if @comment.user.present? %>
+          <a href="/users/<%= @comment.user_id %>">
+            <%= @comment.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Post</dt>
-      <dd><%= @comment.post_id %></dd>
+      <dd>
+        <% if @comment.post.present? %>
+          <a href="/posts/<%= @comment.post_id %>">
+            <%= @comment.post.title %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

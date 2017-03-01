@@ -6,7 +6,13 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Recipe</dt>
-      <dd><%= @photos_of_recipe.recipe_id %></dd>
+      <dd>
+        <% if @photos_of_recipe.recipe.present? %>
+          <a href="/recipes/<%= @photos_of_recipe.recipe_id %>">
+            <%= @photos_of_recipe.recipe.post_id %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

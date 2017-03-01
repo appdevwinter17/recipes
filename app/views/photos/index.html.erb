@@ -18,7 +18,13 @@
       <% @photos.each do |photo| %>
       <tr>
         <td><img src='<%= photo.image %>' class='img-responsive'></td>
-        <td><%= photo.post.title %></td>
+        <td>
+          <% if photo.post.present? %>
+            <a href="/posts/<%= photo.post.id %>">
+              <%= photo.post.title %>
+            </a>
+          <% end %>
+        </td>
         <td><%= photo.caption %></td>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>

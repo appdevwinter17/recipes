@@ -18,7 +18,13 @@
 
       <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= recipe.post.title %></td>
+        <td>
+          <% if recipe.post.present? %>
+            <a href="/posts/<%= recipe.post.id %>">
+              <%= recipe.post.title %>
+            </a>
+          <% end %>
+        </td>
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.instructions %></td>
         <td><%= recipe.recipe_url %></td>

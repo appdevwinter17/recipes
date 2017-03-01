@@ -9,7 +9,13 @@
       <dd><img src="<%= @photo.image %>" class="img-responsive"></dd>
 
       <dt>Post</dt>
-      <dd><%= @photo.post_id %></dd>
+      <dd>
+        <% if @photo.post.present? %>
+          <a href="/posts/<%= @photo.post_id %>">
+            <%= @photo.post.title %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Caption</dt>
       <dd><%= @photo.caption %></dd>
