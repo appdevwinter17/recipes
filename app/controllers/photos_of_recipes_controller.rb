@@ -1,6 +1,6 @@
 class PhotosOfRecipesController < ApplicationController
   def index
-    @photos_of_recipes = PhotosOfRecipe.all
+    @photos_of_recipes = PhotosOfRecipe.page(params[:page]).per(10)
 
     render("photos_of_recipes/index.html.erb")
   end

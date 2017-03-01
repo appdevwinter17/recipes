@@ -10,7 +10,7 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @profiles = Profile.all
+    @profiles = Profile.page(params[:page]).per(10)
 
     render("profiles/index.html.erb")
   end
